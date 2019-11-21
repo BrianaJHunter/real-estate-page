@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://fonts.googleapis.com/css?family=Playfair Display SC' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Lapidary Capitals' rel='stylesheet'>
-	<title>Jeffrey Hunter | FL Realtor</title>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Playfair Display SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lapidary Capitals' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Gupter' rel='stylesheet'>
+
+<title>Jeffrey Hunter | Florida Realtor</title>
+
 <style>
-header {
+.header {
 	top: 0;
 	width: 100%;
 	text-align: center;
 	background-color: #000000;
-	height: 260px;
+	height: 250px;
 }
 
 img {
+	padding: 10px 0;
+}
+
+img#logo {
 	display: inline-block;
 	margin: 0 auto;
-	border-radius: 10px;
+	border-radius: 20px;
 	padding-top: 10px;
 }
 
 a:link, a:visited, a:hover {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:active {
@@ -33,14 +39,15 @@ a:active {
 	text-decoration: underline;
 }
 
-.menu {
+#menu {
 	padding: 10px;
 }
 
-.menu a {
+#menu a {
 	display: inline;
 	padding-right: 15px;
 	font-family: tahoma;
+	font-weight: bold;
 }
 
 body {
@@ -49,8 +56,7 @@ body {
 	font-family: arial;
 }
 
-.content {
-	padding: 20px 200px 0 200px;
+#bio {
 	text-align: center;
 }
 
@@ -63,8 +69,8 @@ h1 {
 }
 
 h4 {
-	font-weight: lighter;
-	font-size: 18px;
+	font-size: 16px;
+	letter-spacing: 2px;
 	font-family: sans-serif;
 }
 
@@ -72,27 +78,85 @@ p {	font-size: 16px; }
 
 .button {
 	background-color: #ffffff;
-	border: 3px solid #827437;
+	border: 2px solid #827437;
 	color: #000000;
 	padding: 15px 30px;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
+	text-decoration: underline;
+	font-size: 14px;
+	margin: 2px 1px;
 	cursor: pointer;
 	width: 150px;
+	font-weight: bolder;
 }
 
-/* Slideshow Image Gallery
-.mySlides {display: none;}
+* {box-sizing:border-box}
 
-img.slideshow {
-	background-color: #ffffff;
-} */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding-top: 30px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#services {
+	background-color: #000000;
+	color: #ffffff;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: center;
+	padding: 50px 0;
+}
+
+h5 {
+	font-size: 15px;
+	font-weight: lighter;
+}
+
 h2 {
 	color: #827437;
-	font-size: 36px;
+	font-size: 40px;
 	font-family: Lapidary Capitals;
 	font-weight: lighter;
 }
@@ -103,97 +167,153 @@ h3 {
 	font-family: Lapidary Capitals;
 	font-weight: lighter;
 }
+
+#testimonials { padding: 20px; }
+
+#contact-form {
+	background-color: #000000;
+	color: #ffffff;
+	padding-bottom: 30px;
+}
+
+#contact {
+	padding: 20px 0;
+}
 </style>
+</head>
 <body>
-<header>
-	<div class="logo">
-		<img src="https://live.staticflickr.com/65535/48919859657_d47e07ecac_o.jpg" width="600" height="200" alt="florida-home-realty-mortgage-logo">
+<div class="header">
+		<!-- Logo -->
+	<div>
+		<img src="https://live.staticflickr.com/65535/48919859657_d47e07ecac_o.jpg" width="600" height="200" alt="florida-home-realty-mortgage-logo" id="logo">
 	</div>
-	<div class="menu">
+		<!-- Navigation Menu -->
+	<div id="menu">
 		<a href="#home">Home</a>
 		<a href="#services">Services</a>
 		<a href="#testimonials">Testimonials</a>
 		<a href="#contact">Contact</a>
 	</div>
-</header>
-
-<div class="content">
-<div>
-	<h1>JEFFREY R. HUNTER</h1>
-	<h4 style="padding-bottom: 15px;">- Jacksonville Real Estate Agent -</h4>
-	<p style="padding-top: 10px; line-height: 2;">I've been a fully-certified Real Estate Agent licsensed since 2005. I can assist you whether you're looking to buy or sell property in the Jacksonville, Florida area. I have the necessary skill set, experience, and resources to assist in making a well-informed purchase. My goal is to make the transisition an easy one!</p>
 </div>
-<!-- Email Me & Call Me Button -->
-<div>
+
+		<!-- Introduction -->
+<div id="bio">
+	<h1>JEFFREY R. HUNTER</h1>
+	<h4 style="padding-bottom: 10px;">- Jacksonville Real Estate Agent -</h4>
+	<p style="padding: 20px 200px 40px; line-height: 2;">I've been a fully-certified licensed Real Estate Agent since 2005. I can assist you whether you're looking to buy or sell property in the Jacksonville, Florida area. I possess the necessary skill set, experience, and resources to assist in making a well-informed purchase. My goal is to make the transisition an easy one!</p>
 	<button class="button">Email Me</button>
 	<button class="button">Call Me</button>
+			<!-- Scrolling Image Gallery-->
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<img src="https://live.staticflickr.com/65535/49098104622_581d1ff1d3_o.jpg" style="width:100%">
+		</div>
+
+	  	<div class="mySlides fade">
+	    	<img src="https://live.staticflickr.com/65535/49098104682_16c5ee1498_o.jpg" style="width:100%">
+	  	</div>
+
+	  	<div class="mySlides fade">
+	    	<img src="https://live.staticflickr.com/65535/49097401578_7c6f84629e_o.jpg" style="width:100%">
+	  	</div>
+
+		<div class="mySlides fade">
+			<img src="https://live.staticflickr.com/65535/49097401593_93b88736ba_o.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+	    	<img src="https://live.staticflickr.com/65535/49097909341_449df6805f_o.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+	    	<img src="https://live.staticflickr.com/65535/49097909366_c8de8e5213_o.jpg" style="width:100%">
+		</div>
+	</div></br>
+
+			<!-- Dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	  <span class="dot" onclick="currentSlide(5)"></span>
+	  <span class="dot" onclick="currentSlide(6)"></span>
+	</div>
+
+		<h2 style="padding: 60px 0;">MY SERVICES</h2>
 </div>
-</div>
-<!-- Scrolling Image Gallery *IMAGES PENDING*
-<div>
-	<img class="mySlides" src="">
-	<img class="mySlides" src="">
-	<img class="mySlides" src="">
-	<img class="mySlides" src="">
-	<img class="mySlides" src="">
-	<img class="mySlides" src="">
 
-	<button class="slideshow display-left" onclick="plusDivs(-1)">&#10094;</button>
-	<button class="slideshow display-right" onclick="plusDivs(+1)">&#10095;</button>
-</div> 
-<script>
-	var slideIndex = 1;
-	showDivs(slideIndex);
-
-	function plusDivs(n) {
-		showDivs(slideIndex += n);
-	}
-
-	function showDivs(n) {
-		var i;
-		var x - document.getElementsByClassName("mySlides");
-		if (n > x.length) {slideIndex = 1}
-		if (n < 1) {slideIndex = x.length}
-		for (i=0; i < x.length; i++) {
-			x[i].style.display = "none";
-		}
-		x[slideIndex-1].style.display = "block";
-	}
-</script> -->
-<!--Services Offered -->
-<div class="section content" id="services">
-	<h2>MY SERVICES</h2>
+		<!--Services Offered -->
+<div id="services">
 	<div>
+		<img src="https://live.staticflickr.com/65535/49097043428_645111ca70_o.jpg" width="330" height="330" alt="buyers">
 		<h3>BUYERS AGENT</h3>
 		<h5>Looking to purchase a new home?</h5>
-		<h3>Sellers Agent</h3>
-		<h5>Looking to sell your home?</h5>
-		<h3>Transaction Broker</h3>
-		<h5>Need a third-party broker to service both buyer and seller?</h5>
-		<h3>Investor</h3>
-		<h5>Looking for a real estate development partner?</h5>
+	</div>
+	<div>		
+		<img src="https://live.staticflickr.com/65535/49097750577_0bd0b01bbe_o.jpg" width="330" height="330" alt="sellers">
+		<h3>SELLERS AGENT</h3>
+		<h5>Looking to sell your current home?</h5>
+	</div>
+	<div>
+		<img src="https://live.staticflickr.com/65535/49097043368_468aefa302_o.jpg" width="330" height="330" alt="transactions">
+		<h3>TRANSACTION BROKER</h3>
+		<h5>Need a third-party to service buyer &amp; seller?</h5>
+	</div>
+	<div>
+		<img src="https://live.staticflickr.com/65535/49097552586_25102169bf_o.jpg" width="330" height="330" alt="investor">
+		<h3>INVESTOR</h3>
+		<h5>Looking for a development partner?</h5>
 	</div>
 </div>
-<!-- Customer Testimonials -->
-<div class="section content" id="testimonials">
-	<h2>TESTIMONIALS</h2>
+
+		<!-- Customer Testimonials -->
+<div id="testimonials">
+	<h2 style="padding: 60px 0;">TESTIMONIALS</h2>
 	<p>"Your feedback here"</br> -Name</p>
 	<p>"Your feedback here"</br> -Name</p>
 	<p>"Your feedback here"</br> -Name</p>
 </div>
-<!-- Contact Form -->
-<div class="section content" id="contact">
-	<h2>GET IN TOUCH WITH ME</h2>
-	<form>
-	</form>
+
+		<!-- Contact Form -->
+<div id="contact-form">
+		<h2 style="padding: 70px 0 40px;">GET IN TOUCH WITH ME</h2>
+		<form></form>
 </div>
-<!-- Map
-<div class="section"> -->
-<!-- More Detail/Summary -->
-<div class="section content">
-	<h4>Florida Homes Realty & Mortgage</h4>
-	<p>Servicing Jacksonville, FL and surrounding areas</p></br>
-	<p>904-372-3832</p>
+
+<div id="contact">
+	<h4 style="font-family: Gupter; font-size: 24px;">Florida Homes Realty & Mortgage</h4>
+		<p style="font-size: 14px; margin-top: -20px;">Servicing Jacksonville, FL &amp; surrounding areas</p>
+		<p style="font-weight: bold;">(904) 372-3832</p>
+
+		<!-- Social Media Icons
+	<div id="social">
+		<img src="" width="25" height="25" alt="linked-in">
+		<img src="" width="25" height="25" alt="facebook">
+		<img src="" width="25" height="25" alt="instagram">
+	</div> --> </br>
+	<p>&copy;2019 Built by Briana J. Hunter</p>
 </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
